@@ -1,12 +1,12 @@
-import Head from "next/head";
-import styles from "@/styles/Home.module.css";
+"use client";
 
-import useSWR from 'swr'
+import Head from "next/head";
+import useSWR from "swr";
 
 
 // To be updated with the Amazon CloudFront distribution domain deployed through the CloudFormation Template
 // You can view this domain in the 'Output' tab of your CloudFormation stack deployment
-const APIEndPoint = process.env.API_ENDPOINT;
+const APIEndPoint = process.env.API_ENDPOINT
 
 export default function Home() {
   return (
@@ -17,10 +17,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
-        className={`${styles.page}`}
-      >
-        <main className={styles.main}>
+      <div>
+        <main>
 
           <p>This react-based single page application (SPA) is hosted in an Amazon S3 bucket exposed through an Amazon CloudFront distribution.</p>
           <p>It calls an API configured in Amazon API Gateway and exposed through the same Amazon CloudFront distribution as the application.</p>
